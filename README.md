@@ -15,7 +15,7 @@ The main piece is in the Configure method
 
     app.UseSwaggerUI(c =>
     {
-        //Notice thelack of / making it relative
+        //Notice the lack of / making it relative
         c.SwaggerEndpoint("swagger/v1/swagger.json", "My API V1");
         //This is the reverse proxy address
         c.RoutePrefix = "api";
