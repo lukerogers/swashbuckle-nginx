@@ -1,0 +1,13 @@
+version: '3.4'
+
+services:
+  api:
+    image: api:${TAG:-latest}
+    container_name: api
+    build:
+      context: Api
+
+  nginx:
+    image: nginx:alpine
+    volumes:
+     - ./Nginx/nginx.conf:/etc/nginx/conf.d/nginx.conf
